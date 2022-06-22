@@ -5,7 +5,8 @@
         "main.scss",
         "_variables.scss",
         "_cards.scss",
-        "_defaults.scss"
+        "_defaults.scss",
+        "_animations.scss"
     ],
     "names": [],
     "file": "main.css"

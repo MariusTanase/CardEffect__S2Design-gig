@@ -1,6 +1,69 @@
-.card__image {
-  width: 287px;
-  height: 444px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap");
+#cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#cards .card {
+  width: 20rem;
+  min-height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2rem 0;
+}
+
+#cards .card__image {
+  width: 20rem;
+  height: 30rem;
+  background-position: center;
+  background-size: cover;
+}
+
+#cards .card__title {
+  color: #030616;
+  line-height: 150%;
+  letter-spacing: 0.035em;
+  margin: .5rem 0;
+  text-align: left;
+}
+
+#cards .card__title h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#cards .card__description {
+  font-weight: 300;
+  margin: 1rem 0;
+  width: auto;
+  min-height: 4rem;
+  opacity: .75;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.035em;
+}
+
+#cards .card__date {
+  font-weight: 300;
 }
 
 *, *::after, *::before {
@@ -8,5 +71,25 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  background-color: #f6f7fe;
+  font-family: 'Poppins', sans-serif, monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */

@@ -31,29 +31,6 @@ const item = [{
 ];
 
 
-//create cards based on json file data and apprend them to dom and show only 4 cards at a time
-function createCards(item) {
-    //show only 4 cards at a time
-    for (let i = 0; i < 4; i++) {
-        createCard(item[i]);
-    }
-}
-
-// Creating animation to remove first element and add it to the end of the array at each 3 seconds
-
-
-let counter = 4;
-function removeFirstElement() {
-    const firstElement = document.querySelector(".card");
-    cardContainer.removeChild(firstElement);
-    createCard(item[counter]);
-    counter++;
-
-    if (counter === item.length) {
-        counter = 0;
-    }
-}
-
 //create a card based on counter and show it on the screen
 function createCard(item) {
     //Create card section
@@ -84,10 +61,47 @@ function createCard(item) {
     cardContainer.appendChild(card);
 }
 
+//create cards based on json file data and apprend them to dom and show only 4 cards at a time
+function createCards(item) {
+    //show only 4 cards at a time
+    for (let i = 0; i < 4; i++) {
+        createCard(item[i]);
+    }
+}
 
+// Creating animation to remove first element and add it to the end of the array at each 3 seconds
+
+
+let counter = 4;
+
+function removeFirstElement() {
+    const firstElement = document.querySelector(".card");
+    cardContainer.removeChild(firstElement);
+    createCard(item[counter]);
+    cardContainer.lastChild.classList.add("card__intro");
+    counter++;
+    if (counter === item.length) {
+        counter = 0;
+    }
+
+    setTimeout(() => {
+        cardContainer.lastChild.classList.remove("card__intro");
+
+    }, 2000);
+}
 
 // Calling all the functions
 createCards(item);
 
 //Calling the intervals
-setInterval(removeFirstElement, 3000);
+
+setInterval(() => {
+    const element = document.querySelector("#cards > section:nth-child(1)")
+    element.classList.add("card__outro");
+    // event listener when animation ends
+    element.addEventListener("animationend", () => {
+        element.classList.remove("card__outro");
+        removeFirstElement();
+
+    })
+}, 6000);

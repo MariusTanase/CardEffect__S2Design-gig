@@ -1,4 +1,4 @@
-#cards{
+#cards {
 
     // responsive card area
     display: flex;
@@ -12,13 +12,8 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    transition: all 3s ease-in-out;
-    transform: translate3d(0, 0, 0);
-    gap: 3rem;
 
-
-
-    .card{
+    .card {
         // all the cards has to be equal on height and witdh
         display: flex;
         flex-direction: column;
@@ -31,27 +26,24 @@
         margin: 0;
         position: relative;
         z-index: 1;
-        overflow: hidden;
-        transition: all 1s ease-in-out;
-        transform: translate3d(0, 0, 0);
         cursor: pointer;
-            animation: card-swipe-left 4s;
-            width: 300px;
-            height: auto;
-            // background-color: red;
-            margin-top: 3rem;
-        .card__title{
+        width: 300px;
+        height: auto;
+        margin: 1rem auto;
+
+        .card__title {
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: .2rem;
         }
-        .card__text{
+
+        .card__text {
             font-size: .8rem;
             letter-spacing: .1rem;
             line-height: 1.5rem;
         }
 
-        .card__image{
+        .card__image {
             width: 300px;
             min-height: 400px;
             max-height: 400px;
@@ -67,50 +59,51 @@
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         }
 
-        .card__rotate{
+        .card__rotate {
             animation: rotateCard 1s;
-            transition : all 1s ease-in-out;
+            transition: all 1s ease-in-out;
         }
 
-        }
-
-        .card__date{
-            font-size: 1rem;
-            font-weight: bold;
-            color: #ccc;
-            letter-spacing: 0.3rem;
-        }
     }
 
-@keyframes card-swipe-left{
-    0%{
+    .card__date {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ccc;
+        letter-spacing: 0.3rem;
+    }
+}
+
+.card__outro {
+    animation: fadeOut 2s;
+}
+
+.card__intro{
+    animation: card-swipe-left 2s;
+}
+
+@keyframes card-swipe-left {
+    0% {
         transform: translateX(5%);
         transition: translateY(2%);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0%);
         transition: translateY(0%);
-
         opacity: 1;
     }
-};
+}
 
-@keyframes rotateCard{
-    0%{
-        transform: rotate(0deg);
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
     }
-    100%{
-        transform: rotate(180deg);
+
+    100% {
+
+        opacity: 0;
     }
 }
 
-.card__dissapear{
-    opacity: 0;
-    transform: translateX(100%);
-}
-
-.card__appear{
-    opacity: 1;
-    transform: translateX(0%);
-}

@@ -18,11 +18,6 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  -webkit-transition: all 3s ease-in-out;
-  transition: all 3s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  gap: 3rem;
 }
 
 #cards .card {
@@ -46,17 +41,10 @@
   margin: 0;
   position: relative;
   z-index: 1;
-  overflow: hidden;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
   cursor: pointer;
-  -webkit-animation: card-swipe-left 4s;
-          animation: card-swipe-left 4s;
   width: 300px;
   height: auto;
-  margin-top: 3rem;
+  margin: 1rem auto;
 }
 
 #cards .card .card__title {
@@ -108,6 +96,16 @@
   letter-spacing: 0.3rem;
 }
 
+.card__outro {
+  -webkit-animation: fadeOut 2s;
+          animation: fadeOut 2s;
+}
+
+.card__intro {
+  -webkit-animation: card-swipe-left 2s;
+          animation: card-swipe-left 2s;
+}
+
 @-webkit-keyframes card-swipe-left {
   0% {
     -webkit-transform: translateX(5%);
@@ -142,38 +140,22 @@
   }
 }
 
-@-webkit-keyframes rotateCard {
+@-webkit-keyframes fadeOut {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    opacity: 0;
   }
 }
 
-@keyframes rotateCard {
+@keyframes fadeOut {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    opacity: 0;
   }
-}
-
-.card__dissapear {
-  opacity: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-.card__appear {
-  opacity: 1;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
 }
 
 *, *::after, *::before {

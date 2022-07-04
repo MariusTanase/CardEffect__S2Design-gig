@@ -3,28 +3,28 @@ const cardContainer = document.querySelector("#cards");
 
 const item = [{
         name: "Dormitory Design",
-        image: "./assets/Image 1.jpg",
+        image: "./assets/images/Image 1.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2019"
     }, {
         name: "Garden Design",
-        image: "./assets/Image 2.jpg",
+        image: "./assets/images/Image 2.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2018"
     }, {
         name: "Forest Gardern Design",
-        image: "./assets/Image 3.jpg",
+        image: "./assets/images/Image 3.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2017"
     }, {
         name: "Library Corner Design",
-        image: "./assets/Image 4.jpg",
+        image: "./assets/images/Image 4.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2016"
     },
     {
         name: "page 5",
-        image: "./assets/Image 1.jpg",
+        image: "./assets/images/Image 1.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2015"
     }

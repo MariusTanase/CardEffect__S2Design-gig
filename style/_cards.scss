@@ -85,13 +85,11 @@
 @keyframes card-swipe-left {
     0% {
         transform: translateX(5%);
-        transition: translateY(2%);
         opacity: 0;
     }
 
     100% {
         transform: translateX(0%);
-        transition: translateY(0%);
         opacity: 1;
     }
 }
@@ -102,7 +100,7 @@
     }
 
     100% {
-
+        transform: translateX(-5%);
         opacity: 0;
     }
 }
